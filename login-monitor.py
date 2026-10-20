@@ -13,7 +13,7 @@ import subprocess
 from datetime import datetime, timezone, timedelta
 
 # === CONFIG ===
-BOT_TOKEN = "8906980010:AAFxrxczzfLeWSiX5hNn9FH78UQ-ICGM5tA"
+BOT_TOKEN = ""
 CHAT_ID = "-1004292699170"
 TOPIC_ID = 58  # message_thread_id
 AUTH_LOG = "/var/log/auth.log"
