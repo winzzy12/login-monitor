@@ -32,27 +32,23 @@ if [[ -n "${TOPIC_ID}" && ! "${TOPIC_ID}" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
-# Skip APT when runtime dependencies already exist. This prevents unrelated
-# broken desktop-package dependencies from blocking installation on VPS.
-export DEBIAN_FRONTEND=noninteractive
-NEED_APT=0
-command -v python3 >/dev/null 2>&1 || NEED_APT=1
-python3 -c 'import venv' >/dev/null 2>&1 || NEED_APT=1
-[[ -r /etc/ssl/certs/ca-certificates.crt ]] || NEED_APT=1
+# Do not run APT during setup. It can fail because of unrelated broken
+# packages on the host. This monitor uses only Python standard-library modules.
+if ! command -v python3 >/dev/null 2>&1; then
+  echo "[ERROR] python3 tidak ditemukan."
+  echo "Pasang Python 3 secara manual setelah memperbaiki APT, lalu ulangi setup."
+  exit 1
+fi
 
-if [[ "${NEED_APT}" -eq 1 ]]; then
-  echo "[INFO] Python/venv/CA certificate belum lengkap; mencoba memasang dependency..."
-  apt-get update
-  if ! apt-get install -y python3 python3-venv ca-certificates; then
-    echo
-    echo "[ERROR] APT gagal memasang dependency."
-    echo "Perbaiki dependency Ubuntu terlebih dahulu dengan:"
-    echo "  dpkg --configure -a"
-    echo "  apt --fix-broken install"
-    exit 1
-  fi
-else
-  echo "[INFO] Python3, venv, dan CA certificates tersedia; melewati APT."
+if ! python3 -c 'import venv' >/dev/null 2>&1; then
+  echo "[ERROR] Modul Python venv belum tersedia untuk $(python3 --version)."
+  echo "Coba: apt install python3-venv"
+  echo "Jika APT menampilkan unmet dependencies, perbaiki APT terlebih dahulu."
+  exit 1
+fi
+
+if [[ ! -r /etc/ssl/certs/ca-certificates.crt ]]; then
+  echo "[WARN] CA certificate bundle tidak ditemukan; HTTPS ke Telegram mungkin gagal."
 fi
 
 install -d -m 0750 "${INSTALL_DIR}"
