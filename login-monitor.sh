@@ -32,9 +32,28 @@ if [[ -n "${TOPIC_ID}" && ! "${TOPIC_ID}" =~ ^[0-9]+$ ]]; then
   exit 1
 fi
 
+# Skip APT when runtime dependencies already exist. This prevents unrelated
+# broken desktop-package dependencies from blocking installation on VPS.
 export DEBIAN_FRONTEND=noninteractive
-apt-get update
-apt-get install -y python3 python3-venv ca-certificates
+NEED_APT=0
+command -v python3 >/dev/null 2>&1 || NEED_APT=1
+python3 -c 'import venv' >/dev/null 2>&1 || NEED_APT=1
+[[ -r /etc/ssl/certs/ca-certificates.crt ]] || NEED_APT=1
+
+if [[ "${NEED_APT}" -eq 1 ]]; then
+  echo "[INFO] Python/venv/CA certificate belum lengkap; mencoba memasang dependency..."
+  apt-get update
+  if ! apt-get install -y python3 python3-venv ca-certificates; then
+    echo
+    echo "[ERROR] APT gagal memasang dependency."
+    echo "Perbaiki dependency Ubuntu terlebih dahulu dengan:"
+    echo "  dpkg --configure -a"
+    echo "  apt --fix-broken install"
+    exit 1
+  fi
+else
+  echo "[INFO] Python3, venv, dan CA certificates tersedia; melewati APT."
+fi
 
 install -d -m 0750 "${INSTALL_DIR}"
 if [[ -f "${PYTHON_PATH}" ]]; then
@@ -264,7 +283,9 @@ PYCONFIG
 unset BOT_TOKEN CHAT_ID TOPIC_ID
 
 chmod 0750 "${PYTHON_PATH}"
-python3 -m venv "${INSTALL_DIR}/venv"
+if [[ ! -x "${INSTALL_DIR}/venv/bin/python" ]]; then
+  python3 -m venv "${INSTALL_DIR}/venv"
+fi
 "${INSTALL_DIR}/venv/bin/python" -m py_compile "${PYTHON_PATH}"
 
 cat > "${SERVICE_PATH}" <<EOF
