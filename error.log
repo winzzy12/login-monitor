@@ -1,0 +1,112 @@
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
+Traceback (most recent call last):
+  File "/root/login-monitor/login-monitor.py", line 282, in <module>
+    tail_log()
+  File "/root/login-monitor/login-monitor.py", line 203, in tail_log
+    last_pos = get_log_position()
+               ^^^^^^^^^^^^^^^^^^
+TypeError: get_log_position() missing 1 required positional argument: 'path'
