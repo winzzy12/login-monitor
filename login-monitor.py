@@ -13,9 +13,9 @@ import subprocess
 from datetime import datetime, timezone, timedelta
 
 # === CONFIG ===
-BOT_TOKEN = ""
-CHAT_ID = "-1004292699170"
-TOPIC_ID = 58  # message_thread_id
+BOT_TOKEN = "BOT_TOKEN"
+CHAT_ID = "ID_CHAT"
+TOPIC_ID = TOPIC_ID  # message_thread_id
 AUTH_LOG = "/var/log/auth.log"
 POLL_INTERVAL = 2  # detik
 INITIAL_BACKLOG = 30  # baca N baris terakhir saat start
